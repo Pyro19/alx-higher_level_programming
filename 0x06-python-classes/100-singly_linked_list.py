@@ -1,22 +1,25 @@
 #!/usr/bin/python3
+"""module for a singly linked list"""
 
 
 class Node:
+    """"defines a node"""
 
     def __init__(self, data, next_node=None):
-        
+        """initializes the node with instance variables"""
 
         self.data = data
         self.next_node = next_node
 
     @property
     def data(self):
-        
+        """gets data attribute"""
 
         return (self.__data)
 
     @data.setter
     def data(self, value):
+        """sets data attribute"""
 
         if not isinstance(value, int):
             raise TypeError('data must be an integer')
@@ -24,6 +27,9 @@ class Node:
 
     @property
     def next_node(self):
+        """get next_node attribute
+        Returns: next node
+        """
 
         return (self.__next_node)
 
@@ -38,12 +44,15 @@ class Node:
 
 
 class SinglyLinkedList:
+    """defines a singly linked list"""
 
     def __init__(self):
+        """Initializes the singly linked list"""
 
         self.head = None
 
     def __str__(self):
+        """make list printable"""
 
         printsll = ""
         location = self.head
